@@ -20,5 +20,8 @@
             @csrf
             <button class="btn btn-danger btn-sm"> X </button>
         </form>
+        <a href="{{ route('articles.destroy', $article->id) }}" data-confirm="Вы уверены?" data-method="delete" rel="nofollow">Удалить</a>
+
+<input type="submit" value="Сохранить" data-disable-with="Сохраняем">
     @endforeach
 @endsection
