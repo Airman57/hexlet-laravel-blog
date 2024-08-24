@@ -7,10 +7,12 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="csrf-param" content="_token" />
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>    
     </head>
     <body>
         <div class="container mt-4">
+            <a href="{{ route('articles.index') }}"> статьи </a>
+            <a href="{{ route('articles.create') }}"> создать статью </a>
             <h1>@yield('header')</h1>
             <div>
                 @yield('content')
